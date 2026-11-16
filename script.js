@@ -8,7 +8,7 @@ const PRODUCTS = [
     pill: "For face & body",
     price: 450,
     priceNote: "",
-    img: "images/cream-pack.jpg",
+    img: "images/studio-cream.jpg",
     desc: "The original HD Whitening Beauty Cream. Instant brightness, improves skin tone and helps remove acne blemishes. No mercury, no steroids — with a 7-day money-back guarantee."
   },
   {
@@ -18,7 +18,7 @@ const PRODUCTS = [
     pill: "SPF 30 · 2 × 20ml",
     price: 1500,
     priceNote: "Free delivery",
-    img: "images/serum-clean.jpg",
+    img: "images/studio-serum.jpg",
     desc: "Day & Night serum set for whole body skin. Day bottle carries SPF 30 sun block; Night bottle works while you sleep. No mercury, no steroids, no side effects."
   },
   {
@@ -48,7 +48,7 @@ const PRODUCTS = [
     pill: "Daily care",
     price: null,
     priceNote: "Price on WhatsApp",
-    img: "images/facewash.jpg",
+    img: "images/studio-facewash.jpg",
     desc: "Daily whitening face wash — the first step of the Sumbal routine. Gentle cleansing that preps your skin for the cream and serum."
   }
 ];
