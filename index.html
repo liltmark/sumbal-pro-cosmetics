@@ -222,17 +222,47 @@
 <div class="drawer-overlay" id="drawerOverlay" hidden></div>
 <aside class="drawer" id="orderDrawer" hidden aria-label="Order form">
   <button class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
-  <img class="drawer-img" id="drawerImg" src="" alt="">
-  <h3 id="drawerTitle"></h3>
-  <p class="drawer-price" id="drawerPrice"></p>
+  <div class="sum-head">
+    <img class="sum-img" id="drawerImg" src="" alt="">
+    <div>
+      <h3 id="drawerTitle"></h3>
+      <p class="sum-unit" id="drawerUnit"></p>
+    </div>
+  </div>
   <form id="orderForm">
-    <label>Your name<input type="text" id="fName" required placeholder="e.g. Fatima Khan"></label>
-    <label>Mobile number<input type="tel" id="fPhone" required placeholder="03xx xxxxxxx"></label>
-    <label>City<input type="text" id="fCity" required placeholder="e.g. Multan"></label>
-    <label>Full address<textarea id="fAddress" required rows="2" placeholder="House, street, area"></textarea></label>
-    <label>Quantity<input type="number" id="fQty" min="1" value="1" required></label>
-    <button type="submit" class="btn btn-wa drawer-submit">Confirm Order on WhatsApp</button>
-    <p class="drawer-note">Payment: Cash on Delivery. Your order opens in WhatsApp — just press send there.</p>
+    <p class="field-label">Pack Options</p>
+    <div class="pack-list" id="packList"></div>
+    <p class="field-label">Quantity</p>
+    <div class="qty-stepper">
+      <button type="button" id="qtyMinus" aria-label="Kam karein">−</button>
+      <span id="fQtyDisplay">1</span>
+      <button type="button" id="qtyPlus" aria-label="Barhayein">+</button>
+    </div>
+    <div class="sum-box">
+      <div class="sum-row"><span>Subtotal</span><strong id="sumSubtotal">—</strong></div>
+      <div class="sum-row"><span>Shipping</span><strong class="free">Free</strong></div>
+      <div class="sum-row total"><span>Total</span><strong id="sumTotal">—</strong></div>
+      <p class="sum-note">Shipping Option: <strong>Free Shipping</strong> · Payment: <strong>Cash on Delivery</strong></p>
+    </div>
+    <label><span class="fl"><i>👤</i> Name of Receiver <b>*</b></span><input type="text" id="fName" required placeholder="Type your name here"></label>
+    <label><span class="fl"><i>📞</i> Phone number <span class="urdu">موبائل فون نمبر</span> <b>*</b></span><input type="tel" id="fPhone" required placeholder="03XXXXXXXXX"></label>
+    <label><span class="fl"><i>📍</i> Complete Address <span class="urdu">مکمل پتہ</span> <b>*</b></span><textarea id="fAddress" required rows="2" placeholder="House No, Street No, Near landmark?"></textarea></label>
+    <label><span class="fl"><i>📍</i> Nearest famous place <b>*</b></span><input type="text" id="fNear" required placeholder="Famous place / masjid / school"></label>
+    <label><span class="fl"><i>🏙️</i> City <b>*</b></span><input type="text" id="fCity" required placeholder="e.g. Multan"></label>
+    <label><span class="fl"><i>🗺️</i> Province (State) <b>*</b></span>
+      <select id="fProvince" required>
+        <option value="">Province (State)</option>
+        <option>Punjab</option>
+        <option>Sindh</option>
+        <option>Khyber Pakhtunkhwa</option>
+        <option>Balochistan</option>
+        <option>Islamabad Capital Territory</option>
+        <option>Azad Jammu &amp; Kashmir</option>
+        <option>Gilgit-Baltistan</option>
+      </select>
+    </label>
+    <button type="submit" class="btn-order-black">🛍️ Order Now — Cash on Delivery</button>
+    <p class="drawer-note">Order WhatsApp par khul jayega — wahan send kar dein, order confirm ho jayega.</p>
   </form>
 </aside>
 
