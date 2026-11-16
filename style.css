@@ -155,15 +155,42 @@ section{padding:2.2rem max(5vw, calc((100% - 1180px) / 2))}
 .drawer-overlay{position:fixed;inset:0;background:rgba(28,7,48,.55);z-index:70}
 .drawer{position:fixed;top:0;right:0;z-index:71;width:min(430px,94vw);height:100dvh;background:#fff;padding:1.4rem;overflow-y:auto;box-shadow:-16px 0 40px rgba(0,0,0,.2)}
 .drawer-close{position:absolute;top:12px;right:12px;background:var(--lav);border:0;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem}
-.drawer-img{border-radius:14px;aspect-ratio:4/3;object-fit:cover;width:100%}
-.drawer h3{margin:1rem 0 .2rem;font-size:1.4rem}
-.drawer-price{color:var(--brand-dark);font-weight:700;margin-bottom:1rem}
+.sum-head{display:flex;gap:.9rem;align-items:center;margin-bottom:1rem;padding-right:2.2rem}
+.sum-img{width:74px;height:74px;border-radius:12px;object-fit:cover;flex:none}
+.sum-head h3{font-size:1.12rem;line-height:1.3}
+.sum-unit{color:var(--brand-dark);font-weight:700;font-size:.9rem;margin-top:.2rem}
 .drawer form{display:grid;gap:.8rem}
+.field-label{font-size:.85rem;font-weight:600;color:var(--plum-900)}
+.pack-list{display:grid;gap:.5rem}
+.pack-opt{display:flex;justify-content:space-between;align-items:center;gap:.6rem;width:100%;padding:.7rem .9rem;border:1.5px solid var(--lav-2);border-radius:10px;background:#fff;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;text-align:left}
+.pack-opt small{font-weight:500;color:var(--muted)}
+.pack-opt.active{background:var(--plum-950);color:#fff;border-color:var(--plum-950)}
+.pack-opt.active small{color:#e7d8f5}
+.qty-stepper{display:inline-flex;align-items:center;border:1.5px solid var(--lav-2);border-radius:10px;overflow:hidden}
+.qty-stepper button{width:46px;height:44px;background:#fff;border:0;font-size:1.25rem;cursor:pointer;color:var(--plum-900)}
+.qty-stepper button:hover{background:var(--lav)}
+.qty-stepper span{min-width:52px;text-align:center;font-weight:700;font-size:1.02rem}
+.sum-box{background:var(--lav);border-radius:12px;padding:.95rem 1.05rem;display:grid;gap:.45rem}
+.sum-row{display:flex;justify-content:space-between;font-size:.92rem}
+.sum-row .free{color:#1d9e50}
+.sum-row.total{border-top:1px solid var(--lav-2);padding-top:.5rem;font-size:1.02rem}
+.sum-note{font-size:.78rem;color:var(--muted)}
 .drawer label{font-size:.85rem;font-weight:500;display:grid;gap:.3rem}
-.drawer input,.drawer textarea{padding:.65rem .8rem;border:1.5px solid var(--lav-2);border-radius:10px;font:inherit;font-size:.95rem}
-.drawer input:focus,.drawer textarea:focus{outline:none;border-color:var(--brand)}
-.drawer-submit{width:100%}
+.drawer .fl{display:flex;align-items:center;gap:.5rem}
+.drawer .fl i{font-style:normal;background:var(--lav);border:1px solid var(--lav-2);border-radius:8px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;flex:none}
+.drawer .fl b{color:#d33;font-weight:700}
+.drawer .urdu{color:var(--muted);font-weight:400}
+.drawer input,.drawer textarea,.drawer select{padding:.65rem .8rem;border:1.5px solid var(--lav-2);border-radius:10px;font:inherit;font-size:.95rem;background:#fff;width:100%}
+.drawer input:focus,.drawer textarea:focus,.drawer select:focus{outline:none;border-color:var(--brand)}
+.btn-order-black{width:100%;background:#111;color:#fff;border:0;border-radius:12px;padding:1rem;font:inherit;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 10px 22px rgba(0,0,0,.25)}
+.btn-order-black:hover{background:#000}
 .drawer-note{font-size:.8rem;color:var(--muted);text-align:center}
+/* card rating + benefit points */
+.p-rating{color:var(--gold);font-size:.92rem;letter-spacing:.1em}
+.p-rating small{color:var(--muted);letter-spacing:0;font-size:.72rem;font-weight:500}
+.p-points{list-style:none;display:grid;gap:.35rem}
+.p-points li{font-size:.85rem;font-weight:500;padding-left:1.45rem;position:relative;line-height:1.35}
+.p-points li::before{content:"✓";position:absolute;left:0;top:.05rem;width:1.02rem;height:1.02rem;background:var(--brand);color:#fff;border-radius:50%;font-size:.66rem;font-weight:700;display:flex;align-items:center;justify-content:center}
 
 @media (max-width:860px){
   .hero,.why,.range-banner{grid-template-columns:1fr}
