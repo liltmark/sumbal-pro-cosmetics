@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liltmark.github.io/sumbal-pro-cosmetics/sitemap.xml
