@@ -3,6 +3,7 @@ const WA_NUMBER = "923047800409";
 const PRODUCTS = [
   {
     id: "beauty-cream-hd",
+    cat: "creams",
     name: "Sumbal Beauty Cream HD",
     pill: "For face & body",
     price: 450,
@@ -12,6 +13,7 @@ const PRODUCTS = [
   },
   {
     id: "whitening-serum",
+    cat: "serum",
     name: "Sumbal Skin Whitening Serum — Day & Night",
     pill: "SPF 30 · 2 × 20ml",
     price: 1500,
@@ -21,6 +23,7 @@ const PRODUCTS = [
   },
   {
     id: "radiance-cream",
+    cat: "creams",
     name: "Sumbal Whitening & Radiance Cream",
     pill: "For face & body",
     price: 450,
@@ -30,6 +33,7 @@ const PRODUCTS = [
   },
   {
     id: "beauty-soap",
+    cat: "soap",
     name: "Sumbal Special Whitening Beauty Soap",
     pill: "Daily care",
     price: null,
@@ -39,6 +43,7 @@ const PRODUCTS = [
   },
   {
     id: "face-wash",
+    cat: "facewash",
     name: "Sumbal Whitening Face Wash",
     pill: "Daily care",
     price: null,
@@ -49,7 +54,8 @@ const PRODUCTS = [
 ];
 
 const grid = document.getElementById("productGrid");
-grid.innerHTML = PRODUCTS.map(p => `
+function cardHTML(p) {
+  return `
   <article class="product-card">
     <img class="p-img" src="${p.img}" alt="${p.name}" loading="lazy">
     <div class="p-body">
@@ -59,7 +65,28 @@ grid.innerHTML = PRODUCTS.map(p => `
       <p class="p-price">${p.price ? "Rs " + p.price.toLocaleString("en-PK") : "WhatsApp par price"} ${p.priceNote ? "<small>· " + p.priceNote + "</small>" : ""}</p>
       <button class="btn btn-gold" data-order="${p.name}" data-price="${p.price || ""}" data-img="${p.img}">Order Now — COD</button>
     </div>
-  </article>`).join("");
+  </article>`;
+}
+function renderProducts(cat) {
+  const list = !cat || cat === "all" ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
+  grid.innerHTML = list.map(cardHTML).join("");
+}
+renderProducts("all");
+
+const catalogList = document.getElementById("catalogList");
+catalogList.innerHTML = "<h4>Price List</h4>" + PRODUCTS.map(p => `
+  <button class="catalog-item" data-order="${p.name}" data-price="${p.price || ""}" data-img="${p.img}">
+    <span>${p.name}</span><strong>${p.price ? "Rs " + p.price.toLocaleString("en-PK") : "WhatsApp"}</strong>
+  </button>`).join("");
+
+document.querySelectorAll(".cat-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderProducts(btn.dataset.cat);
+    document.getElementById("productGrid").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
 
 const drawer = document.getElementById("orderDrawer");
 const overlay = document.getElementById("drawerOverlay");
