@@ -29,6 +29,15 @@ const PRODUCTS = [
     desc: "Achieve luminous skin — evens tone and boosts your natural glow. The radiance edition of the Sumbal whitening cream, for face and whole body."
   },
   {
+    id: "beauty-soap",
+    name: "Sumbal Special Whitening Beauty Soap",
+    pill: "Daily care",
+    price: null,
+    priceNote: "Price on WhatsApp",
+    img: "images/soap.jpg",
+    desc: "The Special Whitening Beauty Soap — gentle daily whitening care for face and body, the classic first step of the Sumbal routine."
+  },
+  {
     id: "face-wash",
     name: "Sumbal Whitening Face Wash",
     pill: "Daily care",
