@@ -5,27 +5,27 @@ const PRODUCTS = [
     id: "beauty-cream-hd",
     name: "Sumbal Beauty Cream HD",
     pill: "For face & body",
-    price: 300,
+    price: 450,
     priceNote: "",
-    img: "images/profile.jpg",
+    img: "images/cream-pack.jpg",
     desc: "The original HD Whitening Beauty Cream. Instant brightness, improves skin tone and helps remove acne blemishes. No mercury, no steroids — with a 7-day money-back guarantee."
   },
   {
     id: "whitening-serum",
     name: "Sumbal Skin Whitening Serum — Day & Night",
     pill: "SPF 30 · 2 × 20ml",
-    price: 1300,
+    price: 1500,
     priceNote: "Free delivery",
-    img: "images/serum.jpg",
+    img: "images/serum-clean.jpg",
     desc: "Day & Night serum set for whole body skin. Day bottle carries SPF 30 sun block; Night bottle works while you sleep. No mercury, no steroids, no side effects."
   },
   {
     id: "radiance-cream",
     name: "Sumbal Whitening & Radiance Cream",
     pill: "For face & body",
-    price: 300,
+    price: 450,
     priceNote: "",
-    img: "images/radiance.jpg",
+    img: "images/radiance-2.jpg",
     desc: "Achieve luminous skin — evens tone and boosts your natural glow. The radiance edition of the Sumbal whitening cream, for face and whole body."
   },
   {
@@ -43,7 +43,7 @@ const PRODUCTS = [
     pill: "Daily care",
     price: null,
     priceNote: "Price on WhatsApp",
-    img: "images/range-2025.jpg",
+    img: "images/facewash.jpg",
     desc: "Daily whitening face wash — the first step of the Sumbal routine. Gentle cleansing that preps your skin for the cream and serum."
   }
 ];
