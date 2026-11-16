@@ -10,9 +10,9 @@ const PRODUCTS = [
     priceNote: "",
     packs: [1, 2, 3, 6],
     packUnit: "Piece",
-    points: ["No Mercury · No Steroids", "Face aur poore jism ke liye", "7-Day Money-Back Guarantee"],
-    img: "images/studio-cream.jpg",
-    desc: "The original HD Whitening Beauty Cream. Instant brightness, improves skin tone and helps remove acne blemishes. No mercury, no steroids — with a 7-day money-back guarantee."
+    points: ["Evenly Tones · Enhance Beauty", "Face aur poore jism ke liye", "7-Day Money-Back Guarantee"],
+    img: "images/cream-poster.jpg",
+    desc: "The original HD Whitening Beauty Cream. Instant brightness, improves skin tone and helps remove acne blemishes — with a 7-day money-back guarantee."
   },
   {
     id: "whitening-serum",
@@ -23,9 +23,9 @@ const PRODUCTS = [
     priceNote: "Free delivery",
     packs: [1, 2, 3],
     packUnit: "Set",
-    points: ["SPF 30 Sunblock — Day bottle", "Day & Night set · 20ml + 20ml", "No Mercury · No Side Effects"],
-    img: "images/studio-serum.jpg",
-    desc: "Day & Night serum set for whole body skin. Day bottle carries SPF 30 sun block; Night bottle works while you sleep. No mercury, no steroids, no side effects."
+    points: ["SPF 30 Sunblock — Day bottle", "Day & Night set · 20ml + 20ml", "Poore jism ki skin ke liye"],
+    img: "images/serum-poster.jpg",
+    desc: "Day & Night serum set for whole body skin. Day bottle carries SPF 30 sun block; Night bottle works while you sleep — short time me visible results."
   },
   {
     id: "radiance-cream",
@@ -36,7 +36,7 @@ const PRODUCTS = [
     priceNote: "",
     packs: [1, 2, 3],
     packUnit: "Piece",
-    points: ["No Mercury · No Steroids", "Luminous glow aur even tone", "Face aur poore jism ke liye"],
+    points: ["Daily istemal ke liye gentle care", "Luminous glow aur even tone", "Face aur poore jism ke liye"],
     img: "images/radiance-2.jpg",
     desc: "Achieve luminous skin — evens tone and boosts your natural glow. The radiance edition of the Sumbal whitening cream, for face and whole body."
   },
@@ -50,7 +50,7 @@ const PRODUCTS = [
     packs: [1, 2, 3],
     packUnit: "Piece",
     points: ["Daily whitening care", "Face aur body dono ke liye", "Sumbal routine ka pehla step"],
-    img: "images/soap.jpg",
+    img: "images/soap-card.jpg",
     desc: "The Special Whitening Beauty Soap — gentle daily whitening care for face and body, the classic first step of the Sumbal routine."
   },
   {
@@ -63,7 +63,7 @@ const PRODUCTS = [
     packs: [1, 2, 3],
     packUnit: "Piece",
     points: ["Rozana gentle cleansing", "Cream aur serum se pehle — pehla step", "Har skin type ke liye"],
-    img: "images/studio-facewash.jpg",
+    img: "images/studio-facewash2.jpg",
     desc: "Daily whitening face wash — the first step of the Sumbal routine. Gentle cleansing that preps your skin for the cream and serum."
   }
 ];
@@ -151,7 +151,7 @@ function openDrawer(name, price, img) {
   qty = 1;
   dTitle.textContent = current.name;
   dUnit.textContent = current.price ? fmt(current.price) + " · Cash on Delivery · Free Shipping" : "Price on WhatsApp · Cash on Delivery";
-  dImg.src = img || "images/range-2026.jpg";
+  dImg.src = img || "images/range-lineup.jpg";
   dImg.alt = current.name;
   renderPacks();
   renderTotals();
